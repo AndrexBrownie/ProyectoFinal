@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="plantilla/plantilla :: head">
+</head>
+
+<body>
+    <header th:replace="plantilla/plantilla :: header"> </header>
+    <div class="container mt-4">
+        <form th:action="@{/grabar}" th:object="${proveedor}" method="post">
+            <div class="card bg-light">
+                <div class="card-header bg-info text-white" th:text="${titulo}"></div>
+                <div class="card-body">
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label" for="nombre">ID:</label>
+                        <div class="col-sm-10">
+                            <input type="text" th:field="*{id}" class="form-control" id="Id" placeholder="ID" disabled>
+                            <small> </small>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label" for="nombre">RUC:</label>
+                        <div class="col-sm-10">
+                            <input type="text" th:field="*{ruc}" class="form-control" id="ruc" placeholder="RUC del Proveedor">
+                            <small> </small>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label" for="marca">RAZÓN SOCIAL:</label> 
+                        <div class="col-sm-10">
+                            <input type="text" th:field="*{razonsocial}" class="form-control" id="razonsocial" placeholder="Razón Social del Proveedor">
+                            <small></small>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label" for="modelo">DISTRITO:</label> 
+                        <div class="col-sm-10">
+                            <input type="text" th:field="*{distrito}" class="form-control" id="distrito" placeholder="Distrito del Proveedor">
+                            <small></small>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label" for="Precio">TELÉFONO:</label> 
+                        <div class="col-sm-10">
+                            <input type="text" th:field="*{telefono}" class="form-control" id="telefono" placeholder="Telefono del Proveedor">
+                            <small></small>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label" for="color">CORREO:</label> 
+                        <div class="col-sm-10">
+                            <input type="text" th:field="*{correo}" class="form-control" id="correo" placeholder="Correo del Proveedor">
+                            <small></small>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label" for="color">PÁGINA WEB:</label> 
+                        <div class="col-sm-10">
+                            <input type="text" th:field="*{paginaweb}" class="form-control" id="paginaweb" placeholder="Pagina Web del Proveedor">
+                            <small></small>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label" for="color">DIRECCIÓN:</label> 
+                        <div class="col-sm-10">
+                            <input type="text" th:field="*{direccion}" class="form-control" id="cdireccion" placeholder="Dirección del Proveedor">
+                            <small></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col-auto">
+                <input type="submit" class="btn btn-primary mb-3" value="Guardar">
+                
+            </div>
+        </form>
+    </div>
+    <footer th:replace="plantilla/plantilla :: footer"> </footer>
+</body>
+
+</html>
+
+
+
